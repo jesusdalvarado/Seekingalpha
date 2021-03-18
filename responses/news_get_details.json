@@ -1,0 +1,41 @@
+{
+  data: {
+    id: '3670877',
+    type: 'fullNews',
+    attributes: {
+      publishOn: '2021-03-09T15:32:17-05:00',
+      isLockedPro: false,
+      commentCount: 3,
+      title: "Judge says Apple, T-Mobile can't use arbitration for consumer privacy suit",
+      lastModified: '2021-03-09T15:32:17-05:00',
+      isExclusive: false,
+      status: 'Active',
+      content: `<ul><li>U.S. District Judge Lorna G. Schofield in New York <a href="https://www.bloomberg.com/news/articles/2021-03-09/apple-loses-push-to-move-consumer-privacy-suit-into-arbitration" target="_blank">denies arbitration</a> for a consumer privacy suit against Apple <span class='ticker-hover-wrapper'>(NASDAQ:<a href='https://seekingalpha.com/symbol/AAPL' title='Apple Inc.'>AAPL</a>)</span> and T-Mobile <span class='ticker-hover-wrapper'>(NASDAQ:<a href='https://seekingalpha.com/symbol/TMUS' title='T-Mobile US, Inc.'>TMUS</a>)</span>.</li><li>The co-defendants claimed T-Mobile's terms and conditions specify that consumer complaints will be handled through arbitration.</li><li>Consumers allege that an iOS flaw and recycled T-Mobile phone numbers gave third parties access to iMessage and Facetime communications.</li><li>Judge Schofield says Apple "is not party to the T-Mobile agreement" and the iPhone maker hasn't proven it can enforce the agreement.</li><li>Recent Apple news: Noted analyst Ming-Chi Kuo forecasts the release dates for Apple's mixed reality headset and<a href="https://seekingalpha.com/news/3670337-apples-mixed-reality-headset-coming-next-year-for-1000-says-noted-analyst" target="_blank"> AR glasses. </a></li></ul>`,
+      metered: true,
+      themes: [Object]
+    },
+    relationships: {
+      author: [Object],
+      sentiments: [Object],
+      primaryTickers: [Object],
+      secondaryTickers: [Object],
+      otherTags: [Object],
+      readNowSuggestion: [Object]
+    },
+    links: {
+      self: '/news/3670877-judge-says-apple-t-mobile-cant-use-arbitration-for-consumer-privacy-suit',
+      canonical: 'https://seekingalpha.com/news/3670877-judge-says-apple-t-mobile-cant-use-arbitration-for-consumer-privacy-suit',
+      uriImage: 'https://static.seekingalpha.com/images/user/logo_120x120.png'
+    }
+  },
+  included: [
+    {
+      id: '30035385',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '146', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '7332', type: 'tag', attributes: [Object], links: [Object] }
+  ]
+}

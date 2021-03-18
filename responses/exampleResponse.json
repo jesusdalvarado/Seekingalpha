@@ -1,0 +1,126 @@
+{
+  symbols: [
+    {
+      name: 'AAPL',
+      tag_kind_id: 52,
+      slug: 'aapl',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 419701,
+      followers_count: 0,
+      id: 146,
+      content: 'Apple Inc.'
+    },
+    {
+      name: 'APLE',
+      tag_kind_id: 52,
+      slug: 'aple',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 7823,
+      followers_count: 0,
+      id: 513836,
+      content: 'Apple Hospitality REIT, Inc.'
+    },
+    {
+      name: 'APPLX',
+      tag_kind_id: 52,
+      slug: 'applx',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 2,
+      has_author_research: 0,
+      rta_count: 431,
+      followers_count: 0,
+      id: 279515,
+      content: 'Appleseed Fund Investor Share Inv'
+    },
+    {
+      name: 'APRU',
+      tag_kind_id: 52,
+      slug: 'apru',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 130,
+      followers_count: 0,
+      id: 20465,
+      content: 'Apple Rush Company, Inc.'
+    },
+    {
+      name: 'GAPJ',
+      tag_kind_id: 52,
+      slug: 'gapj',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 39,
+      followers_count: 0,
+      id: 24895,
+      content: 'Golden Apple Oil & Gas Inc.'
+    }
+  ],
+  people: [
+    {
+      name: 'Apple Investor',
+      tag_kind_id: 6,
+      slug: 'apple-investor',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 14,
+      followers_count: 311,
+      id: 11533,
+      content: null
+    },
+    {
+      name: 'Apple Grade Stocks',
+      tag_kind_id: 6,
+      slug: 'apple-grade-stocks',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 3,
+      followers_count: 45,
+      id: 49961,
+      content: null
+    },
+    {
+      name: 'Little Apple',
+      tag_kind_id: 6,
+      slug: 'little-apple',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 6,
+      followers_count: 307,
+      id: 35478,
+      content: null
+    },
+    {
+      name: 'Michelle Galanter Applebaum',
+      tag_kind_id: 6,
+      slug: 'michelle-galanter-applebaum',
+      is_crypto: 0,
+      is_indices: 0,
+      fund_type_id: 0,
+      has_author_research: 0,
+      rta_count: 2,
+      followers_count: 302,
+      id: 15026,
+      content: null
+    },
+    { name: 'Apple Dan', id: 21736251 }
+  ],
+  pages: [],
+  query: [ 'apple' ]
+}

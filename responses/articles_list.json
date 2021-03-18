@@ -1,0 +1,343 @@
+{
+  data: [
+    {
+      id: '4412645',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412642',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412616',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412638',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412637',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412632',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412631',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412630',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412629',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412628',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412627',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412626',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412624',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412623',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412622',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412621',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412620',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412619',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412618',
+      type: 'article',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '4412617',
+      type: 'earningsSlide',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    }
+  ],
+  included: [
+    {
+      id: '69905',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '554706',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '101421',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '608321',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '5323', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '562', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '8161', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '1129', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '1416', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '34685', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '104980',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    { id: '1433', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '86786',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    { id: '1017', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '146', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '1016', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '14230', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '1534', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '104723',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '464925',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '153603',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '11027', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '20943', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '147193',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '1216', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '1442', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '32510', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '47481', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '103713',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    { id: '1198', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '87516',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '578547',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '44211',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    { id: '4560', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '6526', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '156563',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '18891', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '585076',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '605819',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '586784',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '604281',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '610', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '10164', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '141871',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '190', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '568464',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '103219',
+      type: 'author',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '465015',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '582267',
+      type: 'tag',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '5946', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '5950', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '6192', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '5286', type: 'tag', attributes: [Object], links: [Object] },
+    { id: '9436', type: 'tag', attributes: [Object], links: [Object] }
+  ],
+  meta: {
+    page: {
+      title: 'Latest Financial Analysis & Opinion',
+      description: 'Seeking Alpha is the leading financial website for crowdsourced opinion and analysis of stocks, bonds and other investment analysis.',
+      listTitle: 'Latest Articles',
+      proStatus: 0,
+      size: 20,
+      totalPages: 269,
+      total: 5376,
+      minmaxPublishOn: [Object]
+    },
+    ads: { zone: 'analysis/latest-articles/dashboard' },
+    mone: { params: [Object] }
+  }
+}

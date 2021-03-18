@@ -1,0 +1,198 @@
+{
+  data: [
+    {
+      id: '3670877',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3670553',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3670337',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3670072',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3669913',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3669460',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3669326',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3669275',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3668559',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3668200',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667765',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667641',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667410',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667330',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667395',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3667225',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3665568',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3665454',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3665207',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    },
+    {
+      id: '3665077',
+      type: 'news',
+      attributes: [Object],
+      relationships: [Object],
+      links: [Object]
+    }
+  ],
+  included: [
+    {
+      id: '30035385',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    { id: '146', type: 'tag', attributes: [Object], links: [Object] },
+    {
+      id: '27427253',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '427396',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '52996117',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '51784941',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    },
+    {
+      id: '49447318',
+      type: 'newsAuthorUser',
+      attributes: [Object],
+      links: [Object]
+    }
+  ],
+  meta: {
+    page: {
+      title: 'Apple Inc. (AAPL) Latest Stock News',
+      description: 'Get the latest news and real-time alerts from Apple Inc. (AAPL) stock at Seeking Alpha.',
+      listTitle: 'News',
+      proStatus: 0,
+      size: 20,
+      totalPages: 2,
+      total: 35,
+      minmaxPublishOn: [Object]
+    },
+    ads: { zone: 'quotes/stocks/analysis/dashboard' },
+    mone: { params: [Object] }
+  }
+}
+

@@ -1,0 +1,262 @@
+// ---NOTICIAS, TITULOS Y FECHAS DE PUBLICACION---
+{
+  publishOn: '2021-03-09T15:32:17-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: "Judge says Apple, T-Mobile can't use arbitration for consumer privacy suit"
+}
+{
+  publishOn: '2021-03-09T04:28:05-05:00',
+  isLockedPro: false,
+  commentCount: 31,
+  title: 'Is mixed reality the next frontier for Big Tech?'
+}
+{
+  publishOn: '2021-03-08T12:05:35-05:00',
+  isLockedPro: false,
+  commentCount: 25,
+  title: "Apple's mixed reality headset coming next year for $1,000, says noted analyst"
+}
+{
+  publishOn: '2021-03-05T19:00:48-05:00',
+  isLockedPro: false,
+  commentCount: 180,
+  title: "Wedbush fights the sell-off, seeing more 'massive' tech opportunity"
+}
+{
+  publishOn: '2021-03-05T09:09:50-05:00',
+  isLockedPro: false,
+  commentCount: 78,
+  title: 'Watch Amazon, Facebook, Google as White House names Big Tech critic to new post'
+}
+{
+  publishOn: '2021-03-04T11:00:36-05:00',
+  isLockedPro: false,
+  commentCount: 11,
+  title: 'EU antitrust regulator finalizing Apple antitrust charges related to Spotify complaint'
+}
+{
+  publishOn: '2021-03-04T08:50:49-05:00',
+  isLockedPro: false,
+  commentCount: 92,
+  title: 'Big Tech and non-tech valuations may be closer than they appear: At the Open (update)'
+}
+{
+  publishOn: '2021-03-04T07:16:02-05:00',
+  isLockedPro: false,
+  commentCount: 1,
+  title: "Apple's App Store probed by UK antitrust watchdog"
+}
+{
+  publishOn: '2021-03-02T18:44:04-05:00',
+  isLockedPro: false,
+  commentCount: 172,
+  title: 'Tech party just getting started, Wedbush says - Here are its favorite themes'
+}
+{
+  publishOn: '2021-03-02T08:16:44-05:00',
+  isLockedPro: false,
+  commentCount: 14,
+  title: 'Watch earnings, not rates, Citi says: At the Open'
+}
+{
+  publishOn: '2021-03-01T13:51:45-05:00',
+  isLockedPro: false,
+  commentCount: 38,
+  title: 'Apple iPhone 13 lineup will match iPhone 12 sizes, says noted analyst'
+}
+{
+  publishOn: '2021-03-01T11:00:11-05:00',
+  isLockedPro: false,
+  commentCount: 50,
+  title: 'Apple reopens all U.S. retail stores for first time since pandemic'
+}
+{
+  publishOn: '2021-02-28T17:27:02-05:00',
+  isLockedPro: false,
+  commentCount: 131,
+  title: 'Tech is teetering as rates get high and expectations get higher: Sector Watch'
+}
+{
+  publishOn: '2021-02-28T17:20:00-05:00',
+  isLockedPro: false,
+  commentCount: 81,
+  title: 'Digital wallet payments overtake cash for in-store purchases in 2020: FIS'
+}
+{
+  publishOn: '2021-02-27T08:58:21-05:00',
+  isLockedPro: false,
+  commentCount: 244,
+  title: 'Warren Buffett eases up on talk of a big acquisition in his annual letter'
+}
+{
+  publishOn: '2021-02-26T10:54:50-05:00',
+  isLockedPro: false,
+  commentCount: 226,
+  title: 'U.S. opens door to global digital tax agreement - FT'
+}
+{
+  publishOn: '2021-02-24T11:05:47-05:00',
+  isLockedPro: false,
+  commentCount: 109,
+  title: 'Where did cash go when the market turned against tech after the dot-com crash?'
+}
+{
+  publishOn: '2021-02-24T08:06:34-05:00',
+  isLockedPro: false,
+  commentCount: 8,
+  title: 'Institutions pared holdings of growth tech like Facebook, Microsoft in Q4: At the Open'
+}
+{
+  publishOn: '2021-02-23T16:52:59-05:00',
+  isLockedPro: false,
+  commentCount: 44,
+  title: "Apple's app sign-in requirement prompts DoJ antitrust probe - report"
+}
+{
+  publishOn: '2021-02-23T14:41:44-05:00',
+  isLockedPro: false,
+  commentCount: 132,
+  title: 'Apple plans annual dividend increases, dismisses App Store antitrust concerns'
+}
+// ---RELATIONSHIPS---
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '27427253', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '427396', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [ [Object] ] }
+}
+{
+  author: { data: { id: '52996117', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '427396', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [ [Object] ] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '49447318', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '49447318', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '51784941', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
+{
+  author: { data: { id: '30035385', type: 'newsAuthorUser' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object] ] },
+  otherTags: { data: [] }
+}
