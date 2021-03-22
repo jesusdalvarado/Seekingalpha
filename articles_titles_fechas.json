@@ -1,0 +1,357 @@
+---Attributes---
+{
+  publishOn: '2021-03-09T17:30:06-05:00',
+  isLockedPro: false,
+  commentCount: 1,
+  title: "DocuSign: Demand For Digital Agreement Processes Won't Fizzle Out Post-COVID"
+}
+{
+  publishOn: '2021-03-09T17:14:28-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'IPO Update: Sun Country Airlines Seeks $200 Million IPO'
+}
+{
+  publishOn: '2021-03-09T17:04:27-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: "Lowe's: An Undervalued Dividend King Strongly Positioned In 2021"
+}
+{
+  publishOn: '2021-03-09T17:04:10-05:00',
+  isLockedPro: false,
+  commentCount: 8,
+  title: 'Intel Still Has No Answer To AMD'
+}
+{
+  publishOn: '2021-03-09T17:03:33-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Evofem Biosciences Launches Phexxi: Will Peak Sales Surprise?'
+}
+{
+  publishOn: '2021-03-09T16:49:45-05:00',
+  isLockedPro: false,
+  commentCount: 4,
+  title: "Exxon Mobil: Why You Shouldn't Be Surprised By Its Recent Performance"
+}
+{
+  publishOn: '2021-03-09T16:49:12-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Neo Performance Materials - A Good Bet Last Year'
+}
+{
+  publishOn: '2021-03-09T16:48:42-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Trecora Resources 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:48:27-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'CarParts.com, Inc. 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:47:38-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Syndax Pharmaceuticals, Inc. 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:47:10-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Capitala Finance Corp 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:46:31-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Atlas Technical Consultants, Inc. 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:42:13-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'GoHealth, Inc. 2020 Q4 - Results - Earnings Call Presentation'
+}
+{
+  publishOn: '2021-03-09T16:39:38-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'LivePerson (LPSN) Investor Presentation'
+}
+{
+  publishOn: '2021-03-09T16:38:59-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: '8x8 (EGHT) Investor Presentation - Slideshow'
+}
+{
+  publishOn: '2021-03-09T16:37:49-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'ONE Gas (OGS) Presents At BofA Securities Power, Gas and Solar Leaders Conference - Slideshow'
+}
+{
+  publishOn: '2021-03-09T16:37:34-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Pinnacle West Capital (PNW) Presents At Morgan Stanley Energy & Power Conference - Slideshow'
+}
+{
+  publishOn: '2021-03-09T16:36:09-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'Grupo Supervielle S.A. (SUPV) Presents At J.P. Morgan 2021 Global High Yield & Leveraged Finance Conference - Slideshow'
+}
+{
+  publishOn: '2021-03-09T16:35:53-05:00',
+  isLockedPro: false,
+  commentCount: 2,
+  title: 'Global Medical REIT: A Sound Medical Office Play'
+}
+{
+  publishOn: '2021-03-09T16:35:19-05:00',
+  isLockedPro: false,
+  commentCount: 0,
+  title: 'MDC Partners (MDCA) Presents At J.P. Morgan 2021 Global High Yield & Leveraged Finance Conference - Slideshow'
+}
+---Relationships---
+{
+  author: { data: { id: '69905', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
+  }
+}
+{
+  author: { data: { id: '101421', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: {
+    data: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '104980', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  }
+}
+{
+  author: { data: { id: '86786', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [ [Object], [Object], [Object], [Object] ] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '104723', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
+  },
+  otherTags: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  }
+}
+{
+  author: { data: { id: '103713', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: {
+    data: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ]
+  }
+}
+{
+  author: { data: { id: '87516', type: 'author' } },
+  sentiments: { data: [ [Object] ] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: {
+    data: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object], [Object], [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+{
+  author: { data: { id: '103219', type: 'author' } },
+  sentiments: { data: [ [Object], [Object] ] },
+  primaryTickers: { data: [ [Object], [Object] ] },
+  secondaryTickers: { data: [ [Object], [Object], [Object], [Object] ] },
+  otherTags: {
+    data: [ [Object], [Object], [Object], [Object], [Object], [Object] ]
+  }
+}
+{
+  author: { data: { id: '44211', type: 'author' } },
+  sentiments: { data: [] },
+  primaryTickers: { data: [ [Object] ] },
+  secondaryTickers: { data: [] },
+  otherTags: { data: [ [Object], [Object], [Object], [Object], [Object] ] }
+}
+---Links---
+{
+  self: '/article/4412645-docusign-should-you-buy-docu-stock-with-esignatures-here-to-stay'
+}
+{
+  self: '/article/4412642-ipo-update-sun-country-airlines-seeks-200-million-ipo'
+}
+{
+  self: '/article/4412616-lowes-undervalued-dividend-king-strongly-positioned-in-2021'
+}
+{ self: '/article/4412638-intel-still-no-answer-to-amd' }
+{
+  self: '/article/4412637-evofem-biosciences-launches-phexxi-will-peak-sales-surprise'
+}
+{ self: '/article/4412632-exxon-mobil-recent-performance-no-surprise' }
+{
+  self: '/article/4412631-neo-performance-materials-good-bet-last-year'
+}
+{
+  self: '/article/4412630-trecora-resources-2020-q4-results-earnings-call-presentation'
+}
+{
+  self: '/article/4412629-carparts-com-inc-2020-q4-results-earnings-call-presentation'
+}
+{
+  self: '/article/4412628-syndax-pharmaceuticals-inc-2020-q4-results-earnings-call-presentation'
+}
+{
+  self: '/article/4412627-capitala-finance-corp-2020-q4-results-earnings-call-presentation'
+}
+{
+  self: '/article/4412626-atlas-technical-consultants-inc-2020-q4-results-earnings-call-presentation'
+}
+{
+  self: '/article/4412624-gohealth-inc-2020-q4-results-earnings-call-presentation'
+}
+{ self: '/article/4412623-liveperson-lpsn-investor-presentation' }
+{ self: '/article/4412622-8x8-eght-investor-presentation-slideshow' }
+{
+  self: '/article/4412621-one-gas-ogs-presents-bofa-securities-power-gas-and-solar-leaders-conference-slideshow'
+}
+{
+  self: '/article/4412620-pinnacle-west-capital-pnw-presents-morgan-stanley-energy-power-conference-slideshow'
+}
+{
+  self: '/article/4412619-grupo-supervielle-s-supv-presents-j-p-morgan-2021-global-high-yield-leveraged-finance'
+}
+{
+  self: '/article/4412618-global-medical-reit-what-makes-gmre-a-good-bet'
+}
+{
+  self: '/article/4412617-mdc-partners-mdca-presents-j-p-morgan-2021-global-high-yield-leveraged-finance-conference'
+}
