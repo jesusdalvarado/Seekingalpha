@@ -79,12 +79,14 @@ async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, lastD
 
   tickers.forEach(async (ticker) => {
     let titlesDates = await getNewsList(ticker, numNews)
-    console.log('---init', ticker, titlesDates, '---end')
 
-    let filteredDates = filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres)
+    // Applying filters
+    let filteredTitlesDates = filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres)
+    filteredTitlesDates = filterNewsByKeywords(filteredTitlesDates)
+
     console.log(`--- ${ticker.toUpperCase()} ---`)
 
-    filteredDates.forEach((el) => {
+    filteredTitlesDates.forEach((el) => {
       console.log('publishOn:', el['publishOn'])
       console.log('title:', el['title'], '\n')
     })
@@ -119,6 +121,26 @@ function filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres) {
   })
 
   return filteredNewsByDate
+}
+
+function filterNewsByKeywords(titlesDates) {
+  const keywords = ['EPS','preliminary','prelim','pre','revenue','beats','miss','misses','earning','preview','prerelease','report','results','Q1','Q2','Q3','Q4','FQ1','FQ2','FQ3','FQ4']
+  let filteredByKeywords = []
+  let re = null
+
+  titlesDates.forEach((news) => {
+    for (let i=0; i<keywords.length; i++) {
+
+      re = new RegExp(keywords[i], 'i');
+      if ( news['title'].match(re) ) {
+        filteredByKeywords.push(news)
+        break
+      }
+    }
+
+  })
+
+  return filteredByKeywords
 }
 
 export {getNewsList, getNewsDetails, getAllDataForTicker, getFormattedNews, filterNewsByDates}
