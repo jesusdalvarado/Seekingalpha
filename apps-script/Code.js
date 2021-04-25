@@ -1,4 +1,86 @@
-function myFunction() {
+async function main() {
+  // const tickers = ['aapl', 'den']
+  const tickers = getTickersFinviz()
+
+  const numNews = 5
+  const lastDateOfInteres = '2021-04-25'
+  const prevDateOfInteres = '2021-04-24'
+
+  const filteredTitlesDates = await getFormattedNews(tickers, numNews, lastDateOfInteres, prevDateOfInteres)
+  console.log(filteredTitlesDates, '---res')
+  //aqui solo insertaremos en el mock los tikers seleccionados con el formato adecuado (incluir la x para luego colocar los no filtrados)
+
+  const map = filteredTitlesDates.map(x => [x.ticker, x.publishOn, x.title]);
+
+  const ssURL = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
+  let ss = SpreadsheetApp.openByUrl(ssURL);
+  console.log('---Name of the SpreadSheet---', ss.getName());
+  const sheet = ss.getSheetByName('Mock')
+  // sheet.getRange(sheet.getLastRow() + 1, 1, res.length, res[0].length).setValues(res);
+  sheet.getRange(sheet.getLastRow() + 1, 1, map.length, map[0].length).setValues(map);
+
+
+  // console.log(sheet.getRange(sheet.getLastRow() + 1, 1, map.length, map[0].length))
+  // ss.getSheetByName('Mock').activate()
+}
+
+function some() {
+  // const ssURL = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
+  // let ss = SpreadsheetApp.openByUrl(ssURL);
+  // console.log('---Name of the SpreadSheet---', ss.getName());
+  // const sheet = ss.getSheetByName('Mock')
+
+  // Passing only two arguments returns a "range" with a single cell.
+  // var range = sheet.getRange(1, 1);
+  // var values = range.getValues();
+  // Logger.log(values[0][0]);
+
+  // When the "numRows" argument is used, only a single column of data is returned.
+  // var range = sheet.getRange(1, 1, 3, 3);
+  // var values = range.getValues();
+  // console.log(values)
+
+
+	// [ { ticker: 'CAMP',
+  //   title: 'CalAmp EPS beats by $0.09, misses on revenue',
+  //   publishOn: '2021-04-22T16:08:41-04:00' },
+  // { ticker: 'CBNK',
+  //   title: 'Capital Bancorp EPS beats by $0.09, misses on revenue',
+  //   publishOn: '2021-04-22T07:30:41-04:00' } ] '---res'
+
+
+  // [ ['CAMP', '2021-04-22', 'CalAmp EPS beats by...'], ['CBNK', '2021-04-22', 'Capital Bancorp EPS beats...'] ]
+
+  let a = [ [ '1',
+      'CAMP',
+      'CalAmp Corp.',
+      'Technology',
+      'Communication Equipment',
+      'USA',
+      '468.81M',
+      '-',
+      '13.46',
+      '21.92%',
+      '777,741' ],
+    [ '2',
+      'CBNK',
+      'Capital Bancorp, Inc.',
+      'Financial',
+      'Banks - Regional',
+      'USA',
+      '304.89M',
+      '12.16',
+      '22.77',
+      '7.41%',
+      '142,496' ] ]
+
+  const d = sheet.getRange(6,1,a.length,a[0].length)
+  console.log(d)
+  d.setValues(a);
+
+}
+
+function getTickersFinviz() {
   var start = 1
   var url = "https://finviz.com/screener.ashx?v=151&f=cap_largeunder,geo_usa,ind_stocksonly,sh_curvol_o100,sh_relvol_o2,sh_short_u20,ta_change_u3,ta_sma200_pa,ta_sma50_pa&ft=4&o=ticker&r="+ start;
   var content = UrlFetchApp.fetch(url).getContentText();
@@ -26,7 +108,7 @@ function myFunction() {
     var data1 = data(e).from("screener-link\">").to("</a>").build();
     var data2 = data(data1).from(">").to("<").build();
     if (oticker == "") oticker = ticker;
-    console.log(oticker, ticker, '---111')
+    // console.log(oticker, ticker, '---111')
     if (ticker != oticker) {
       temp.splice(1, 0, oticker);
       res.push(temp);
@@ -38,18 +120,9 @@ function myFunction() {
     }
   });
 
-  
   let tickers = res.map(x => x[1])
-  console.log(tickers, '---222')
 
-
-  var ss = SpreadsheetApp.getActiveSheet();
-
-
-var ss = SpreadsheetApp.openByUrl('https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138');
-Logger.log(ss.getName());
-
-  // ss.getRange(ss.getLastRow() + 1, 1, res.length, res[0].length).setValues(res);
+  return tickers
 }
 
 
