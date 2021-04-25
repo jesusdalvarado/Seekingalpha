@@ -1,5 +1,5 @@
 # Seekingalpha
-Software created to improve and speed up the trading process and analysis of news
+Software created to improve and speed up the trading process and analysis of news.
 
 ## Quick Start
 In terminal run ```node app.js```
