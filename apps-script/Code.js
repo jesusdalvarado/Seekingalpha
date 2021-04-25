@@ -143,8 +143,6 @@ function getTotalTickers() {
 
 
 
-
-
 var Parser = function(content) {
     this.content = content;
     this.direction = "from";

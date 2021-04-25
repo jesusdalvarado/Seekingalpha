@@ -3,7 +3,6 @@ const xRapidApiKey = '30c000177fmshdea0df88a20a59ep1640c4jsna41d72b81051'
 const xRapidApiHost = 'seeking-alpha.p.rapidapi.com'
 
 function getNewsList(ticker='aapl', numNews = 5) {
-  console.log(ticker, numNews, '---555')
   const options = {
     method: 'GET',
     params: {id: ticker, size: `${numNews}`},
@@ -13,18 +12,21 @@ function getNewsList(ticker='aapl', numNews = 5) {
     },
     muteHttpExceptions: true
   }
-
   let titlesDates = []
   console.log('---REQUEST---')
-  // let response = UrlFetchApp.fetch(`https://seeking-alpha.p.rapidapi.com/news/list?id=${ticker}&size=${numNews}`, options)
-  // let json = response.getContentText()
-  // console.log(json, '---666')
-  // let data = JSON.parse(json).data
-  // data.forEach(news => {
-  //   titlesDates.push({publishOn: news.attributes['publishOn'], title: news.attributes['title']})
-  // })
-  // console.log(titlesDates, '---444')
+  wait(210) // delay to avoid rate limits
+  let response = UrlFetchApp.fetch(`https://seeking-alpha.p.rapidapi.com/news/list?id=${ticker}&size=${numNews}`, options)
+  let json = response.getContentText()
+  let data = JSON.parse(json).data
+  data.forEach(news => {
+    titlesDates.push({publishOn: news.attributes['publishOn'], title: news.attributes['title']})
+  })
   return titlesDates
+}
+
+function wait(ms) {
+  const end = Date.now() + ms
+  while (Date.now() < end) continue
 }
 
 async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, lastDateOfInteres='2021-04-23', prevDateOfInteres='2021-03-11') {
@@ -32,11 +34,9 @@ async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, lastD
   // const tickers = ['aapl', 'den', 'glt']   // Tickers obtained from Finviz
   // const lastDateOfInteres = '2021-03-12'
   // const prevDateOfInteres = '2021-03-11'
-  console.log(tickers, '---111')
   let filteredTitlesDates = null
   let filteredTitlesDatesArr = []
   await tickers.forEach(async (ticker) => {
-    console.log(ticker, '---222')
     let titlesDates = await getNewsList(ticker, numNews)
     console.log(titlesDates, '---Before filtering---')
     // Applying filters
