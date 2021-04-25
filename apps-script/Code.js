@@ -1,7 +1,5 @@
 async function main() {
-  // const tickers = ['aapl', 'den']
-  const tickers = getTickersFinviz()
-
+  const tickers = getTickersFinviz() // ['aapl', 'den']
   const numNews = 5
   const lastDateOfInteres = '2021-04-25'
   const prevDateOfInteres = '2021-04-24'
@@ -24,7 +22,7 @@ async function main() {
   // ss.getSheetByName('Mock').activate()
 }
 
-function some() {
+// function some() {
   // const ssURL = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
   // let ss = SpreadsheetApp.openByUrl(ssURL);
   // console.log('---Name of the SpreadSheet---', ss.getName());
@@ -51,82 +49,97 @@ function some() {
 
   // [ ['CAMP', '2021-04-22', 'CalAmp EPS beats by...'], ['CBNK', '2021-04-22', 'Capital Bancorp EPS beats...'] ]
 
-  let a = [ [ '1',
-      'CAMP',
-      'CalAmp Corp.',
-      'Technology',
-      'Communication Equipment',
-      'USA',
-      '468.81M',
-      '-',
-      '13.46',
-      '21.92%',
-      '777,741' ],
-    [ '2',
-      'CBNK',
-      'Capital Bancorp, Inc.',
-      'Financial',
-      'Banks - Regional',
-      'USA',
-      '304.89M',
-      '12.16',
-      '22.77',
-      '7.41%',
-      '142,496' ] ]
+//   let a = [ [ '1',
+//       'CAMP',
+//       'CalAmp Corp.',
+//       'Technology',
+//       'Communication Equipment',
+//       'USA',
+//       '468.81M',
+//       '-',
+//       '13.46',
+//       '21.92%',
+//       '777,741' ],
+//     [ '2',
+//       'CBNK',
+//       'Capital Bancorp, Inc.',
+//       'Financial',
+//       'Banks - Regional',
+//       'USA',
+//       '304.89M',
+//       '12.16',
+//       '22.77',
+//       '7.41%',
+//       '142,496' ] ]
 
-  const d = sheet.getRange(6,1,a.length,a[0].length)
-  console.log(d)
-  d.setValues(a);
+//   const d = sheet.getRange(6,1,a.length,a[0].length)
+//   console.log(d)
+//   d.setValues(a);
 
-}
+// }
 
 function getTickersFinviz() {
-  var start = 1
-  var url = "https://finviz.com/screener.ashx?v=151&f=cap_largeunder,geo_usa,ind_stocksonly,sh_curvol_o100,sh_relvol_o2,sh_short_u20,ta_change_u3,ta_sma200_pa,ta_sma50_pa&ft=4&o=ticker&r="+ start;
-  var content = UrlFetchApp.fetch(url).getContentText();
-
-  var scraped = data(content).from('class=\"screener-body-table-nw\"').to('</td>').iterate();
-  var res = [];
-
-  // If you don't want column titles, remove this part.
-  // var temp = [];
-  // var titles = data(content).from("style=\"cursor:pointer;\">").to("</td>").iterate();
-  // titles.forEach(function(e){
-  //   if (!~e.indexOf('\">')) {
-  //     temp.push(e);
-  //   } else if (~e.indexOf('img')) {
-  //     temp.push(e.replace(/<img.+>/g, ''));
-  //   }
-  // }
-  // res.push(temp);
-  // -----
-
-  var temp = [];
-  var oticker = "";
-  scraped.forEach(function(e){
-    var ticker = data(e).from("<a href=\"quote.ashx?t=").to("&").build();
-    var data1 = data(e).from("screener-link\">").to("</a>").build();
-    var data2 = data(data1).from(">").to("<").build();
-    if (oticker == "") oticker = ticker;
-    // console.log(oticker, ticker, '---111')
-    if (ticker != oticker) {
-      temp.splice(1, 0, oticker);
-      res.push(temp);
-      temp = [];
-      oticker = ticker;
-      temp.push(data1);
-    } else {
-      if (!~(data2 || data1).indexOf('<')) temp.push(data2 || data1);
-    }
-  });
-
-  let tickers = res.map(x => x[1])
+  let arrOffsets = getOffsets()
+  let tickers = []
+  let tickersFromPage = []
+  arrOffsets.forEach(function(offset) {
+    tickersFromPage = getTickersFromPage(offset)
+    tickers = tickers.concat(tickersFromPage)
+  })
 
   return tickers
 }
 
+function getOffsets() {
+  const totalTickers = getTotalTickers()
+  const maxTickersPerPage = 20
 
+  const numIterations = Math.ceil( (totalTickers / maxTickersPerPage) )
 
+  let arrOffsets = []
+  let offset = 1
+  for (let i=0; i<numIterations; i++) {
+
+    if (i === 0) {
+      arrOffsets.push(offset)
+      offset += maxTickersPerPage
+      continue
+    }
+
+    arrOffsets.push(offset)
+    offset += maxTickersPerPage
+  }
+
+  return arrOffsets
+}
+
+function getTickersFromPage(offset) {
+  var url = "https://finviz.com/screener.ashx?v=151&f=cap_largeunder,geo_usa,ind_stocksonly,sh_curvol_o100,sh_relvol_o2,sh_short_u20,ta_change_u3,ta_sma200_pa,ta_sma50_pa&ft=4&o=ticker&r="+ offset;
+  var content = UrlFetchApp.fetch(url).getContentText();
+  var scraped = data(content).from('class=\"screener-body-table-nw\"').to('</td>').iterate();
+  var oticker = ""
+  let tickers = []
+
+  scraped.forEach(function(e) {
+    var ticker = data(e).from("<a href=\"quote.ashx?t=").to("&").build();
+
+    if (oticker == "" || ticker!=oticker) {
+      oticker = ticker
+      tickers.push(oticker)
+    }
+  })
+
+  return tickers
+}
+
+function getTotalTickers() {
+  var url = "https://finviz.com/screener.ashx?v=151&f=cap_largeunder,geo_usa,ind_stocksonly,sh_curvol_o100,sh_relvol_o2,sh_short_u20,ta_change_u3,ta_sma200_pa,ta_sma50_pa&ft=4&o=ticker&r="+ 1;
+  var content = UrlFetchApp.fetch(url).getContentText();
+
+  const countText = data(content).from('class=\"count-text\"').to('</td>').iterate()[0]
+  const totalTickers = parseInt(countText.replace('><b>Total: </b>', '').split(' ')[0])
+  return totalTickers
+}
 
 
 
