@@ -30,10 +30,6 @@ function wait(ms) {
 }
 
 async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, lastDateOfInteres='2021-04-23', prevDateOfInteres='2021-03-11') {
-  // const numNews = 5                        // Limit number of news per ticker
-  // const tickers = ['aapl', 'den', 'glt']   // Tickers obtained from Finviz
-  // const lastDateOfInteres = '2021-03-12'
-  // const prevDateOfInteres = '2021-03-11'
   let filteredTitlesDates = null
   let filteredTitlesDatesArr = []
   await tickers.forEach(async (ticker) => {
