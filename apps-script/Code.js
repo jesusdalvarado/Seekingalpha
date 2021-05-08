@@ -3,6 +3,8 @@ async function main() {
   let spreadSheet = SpreadsheetApp.openByUrl(url);
   const sheet = spreadSheet.getSheetByName('Mock')
   const tickers = getTickersFinviz() //['AAPL', 'DEN']
+  console.log('---TICKERS TO ANALYZE---', tickers)
+  console.log(`${tickers.length} tickers found in Finviz`)
   const numNews = 5
   const dateTime1 = sheet.getRange('A2:A2').getValue()
   const dateTime2 = sheet.getRange('B2:B2').getValue()
@@ -17,6 +19,7 @@ async function main() {
 
   const formattedData = filteredTitlesDates.map(x => ['x', x.ticker, x.publishOn, x.title]);
 
+  console.log('---RESULTS---', formattedData)
   await insertResultsInSheet(formattedData, sheet)
 }
 
