@@ -13,79 +13,61 @@ async function main() {
 
   if (filteredTitlesDates === 'ERROR quota limit reached.') { popup() }
 
-  const filteredTitlesDates = await getFormattedNews(tickers, numNews, lastDateOfInteres, prevDateOfInteres)
-  console.log(filteredTitlesDates, '---res')
   //aqui solo insertaremos en el mock los tikers seleccionados con el formato adecuado (incluir la x para luego colocar los no filtrados)
 
-  const map = filteredTitlesDates.map(x => [x.ticker, x.publishOn, x.title]);
+  const formattedData = filteredTitlesDates.map(x => ['x', x.ticker, x.publishOn, x.title]);
 
-  const ssURL = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
-  let ss = SpreadsheetApp.openByUrl(ssURL);
-  console.log('---Name of the SpreadSheet---', ss.getName());
-  const sheet = ss.getSheetByName('Mock')
-  // sheet.getRange(sheet.getLastRow() + 1, 1, res.length, res[0].length).setValues(res);
-  sheet.getRange(sheet.getLastRow() + 1, 1, map.length, map[0].length).setValues(map);
-
-
-  // console.log(sheet.getRange(sheet.getLastRow() + 1, 1, map.length, map[0].length))
-  // ss.getSheetByName('Mock').activate()
+  await insertResultsInSheet(formattedData, sheet)
 }
 
-// function some() {
-  // const ssURL = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
-  // let ss = SpreadsheetApp.openByUrl(ssURL);
-  // console.log('---Name of the SpreadSheet---', ss.getName());
-  // const sheet = ss.getSheetByName('Mock')
+function insertResultsInSheet(formattedData, sheet) {
+  let tickersChecked = []
+  let ticker = null
+  formattedData.forEach((row) => {
+    ticker = row[1]
+    if (tickersChecked.includes(ticker)) {
+      insertIntheSameRow(row, tickersChecked, sheet)
+    } else {
+      insertInNewRow(row, sheet)
+    }
+    tickersChecked.push(ticker)
+  })
+}
 
-  // Passing only two arguments returns a "range" with a single cell.
-  // var range = sheet.getRange(1, 1);
-  // var values = range.getValues();
-  // Logger.log(values[0][0]);
+function insertInNewRow(row, sheet) {
+  const START_ROW = sheet.getLastRow()+1
+  const START_COLUMN = 1
+  const NUM_ROWS = 1
+  const NUM_COLUMNS = row.length
+  range = sheet.getRange(START_ROW, START_COLUMN, NUM_ROWS, NUM_COLUMNS)
+  range.setValues([row])
+}
 
-  // When the "numRows" argument is used, only a single column of data is returned.
-  // var range = sheet.getRange(1, 1, 3, 3);
-  // var values = range.getValues();
-  // console.log(values)
+function insertIntheSameRow(row, tickersChecked, sheet) {
+  const countTickerNews = getCountTickerNews(row, tickersChecked)
+  const sliceRow = row.slice(2, 4)
+  const START_ROW = sheet.getLastRow()
+  const START_COLUMN = (countTickerNews<=1) ? (row.length+1) : (2*countTickerNews)+3
+  const NUM_ROWS = 1
+  const NUM_COLUMNS = sliceRow.length
+  range = sheet.getRange(START_ROW, START_COLUMN, NUM_ROWS, NUM_COLUMNS)
+  range.setValues([sliceRow])
+}
 
+function getCountTickerNews(row, tickersChecked) {
+  let count = 0
+  const ticker = row[1]
+  tickersChecked.forEach((tick) => {
+    if (tick === ticker) count+=1
+  })
 
-	// [ { ticker: 'CAMP',
-  //   title: 'CalAmp EPS beats by $0.09, misses on revenue',
-  //   publishOn: '2021-04-22T16:08:41-04:00' },
-  // { ticker: 'CBNK',
-  //   title: 'Capital Bancorp EPS beats by $0.09, misses on revenue',
-  //   publishOn: '2021-04-22T07:30:41-04:00' } ] '---res'
+  return count
+}
 
-
-  // [ ['CAMP', '2021-04-22', 'CalAmp EPS beats by...'], ['CBNK', '2021-04-22', 'Capital Bancorp EPS beats...'] ]
-
-//   let a = [ [ '1',
-//       'CAMP',
-//       'CalAmp Corp.',
-//       'Technology',
-//       'Communication Equipment',
-//       'USA',
-//       '468.81M',
-//       '-',
-//       '13.46',
-//       '21.92%',
-//       '777,741' ],
-//     [ '2',
-//       'CBNK',
-//       'Capital Bancorp, Inc.',
-//       'Financial',
-//       'Banks - Regional',
-//       'USA',
-//       '304.89M',
-//       '12.16',
-//       '22.77',
-//       '7.41%',
-//       '142,496' ] ]
-
-//   const d = sheet.getRange(6,1,a.length,a[0].length)
-//   console.log(d)
-//   d.setValues(a);
-
-// }
+function popup(message="Error: Rate limit reached.") {
+  var ui = SpreadsheetApp.getUi()
+  ui.alert(message)
+}
 
 function getTickersFinviz() {
   let arrOffsets = getOffsets()
@@ -144,9 +126,9 @@ function getTickersFromPage(offset) {
 function getTotalTickers() {
   var url = "https://finviz.com/screener.ashx?v=151&f=cap_largeunder,geo_usa,ind_stocksonly,sh_curvol_o100,sh_relvol_o2,sh_short_u20,ta_change_u3,ta_sma200_pa,ta_sma50_pa&ft=4&o=ticker&r="+ 1;
   var content = UrlFetchApp.fetch(url).getContentText();
-
   const countText = data(content).from('class=\"count-text\"').to('</td>').iterate()[0]
   const totalTickers = parseInt(countText.replace('><b>Total: </b>', '').split(' ')[0])
+
   return totalTickers
 }
 
@@ -254,7 +236,3 @@ Parser.prototype.iterate = function() {
 function data(content) {
     return new Parser(content);
 }
-
-
-
-
