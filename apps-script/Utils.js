@@ -12,10 +12,16 @@ function getNewsList(ticker='aapl', numNews = 5) {
     muteHttpExceptions: true
   }
   let titlesDates = []
-  console.log('---REQUEST---')
-  wait(210) // delay to avoid rate limits
+  console.log('---REQUEST to API---')
+  wait(210)
   let response = UrlFetchApp.fetch(`https://seeking-alpha.p.rapidapi.com/news/list?id=${ticker}&size=${numNews}`, options)
   let json = response.getContentText()
+
+  if (json.includes("You have exceeded")) {
+    console.log('ERROR quota limit reached', json)
+    return 'ERROR quota limit reached'
+  }
+
   let data = JSON.parse(json).data
   data.forEach(news => {
     titlesDates.push({publishOn: news.attributes['publishOn'], title: news.attributes['title']})
@@ -28,26 +34,30 @@ function wait(ms) {
   while (Date.now() < end) continue
 }
 
-async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, lastDateOfInteres='2021-04-23', prevDateOfInteres='2021-03-11') {
+async function getFormattedNews(tickers=['aapl', 'den', 'glt'], numNews=5, day1='2021-04-23', day2='2021-03-11') {
   let filteredTitlesDates = null
   let filteredTitlesDatesArr = []
-  await tickers.forEach(async (ticker) => {
-    let titlesDates = await getNewsList(ticker, numNews)
+
+  for(let i=0; i<tickers.length; i++) {
+    let titlesDates = await getNewsList(tickers[i], numNews)
+    if (titlesDates === 'ERROR quota limit reached') {
+      return 'ERROR quota limit reached.'
+    }
+    if (titlesDates === 'ERROR quota limit reached') { rateLimitReached = true }
     console.log(titlesDates, '---Before filtering---')
-    // Applying filters
-    filteredTitlesDates = filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres)
+    filteredTitlesDates = filterNewsByDates(titlesDates, day1, day2)
     console.log(filteredTitlesDates, '---Filtered by Dates---')
     filteredTitlesDates = filterNewsByKeywords(filteredTitlesDates)
     console.log(filteredTitlesDates, '---Filtered by Keywords---')
     filteredTitlesDates.forEach((el) => {
-      filteredTitlesDatesArr.push( { 'ticker': ticker.toUpperCase(),'title':el['title'],'publishOn': el['publishOn'] } )
+      filteredTitlesDatesArr.push( { 'ticker': tickers[i].toUpperCase(),'title':el['title'],'publishOn': el['publishOn'] } )
     })
-  })
+  }
 
   return filteredTitlesDatesArr
 }
 
-function filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres) {
+function filterNewsByDates(titlesDates, day1, day2) {
   let date = null
   let filteredNewsByDate = []
 
@@ -66,7 +76,7 @@ function filterNewsByDates(titlesDates, lastDateOfInteres, prevDateOfInteres) {
 
     let formattedDate = year + '-' + month + '-' + day
 
-    if (formattedDate===lastDateOfInteres || formattedDate===prevDateOfInteres) {
+    if (formattedDate===day1 || formattedDate===day2) {
       filteredNewsByDate.push(news)
     }
 
