@@ -1,5 +1,4 @@
-
-const xRapidApiKey = '30c000177fmshdea0df88a20a59ep1640c4jsna41d72b81051'
+const xRapidApiKey = PropertiesService.getScriptProperties().getProperty('apiKey')
 const xRapidApiHost = 'seeking-alpha.p.rapidapi.com'
 
 function getNewsList(ticker='aapl', numNews = 5) {
@@ -96,54 +95,16 @@ function filterNewsByKeywords(titlesDates) {
   return filteredByKeywords
 }
 
-// function getNewsDetails(id='aapl') {
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       'x-rapidapi-key': xRapidApiKey,
-//       'x-rapidapi-host': xRapidApiHost
-//     },
-//     muteHttpExceptions: true
-//   };
-
-//   let response = UrlFetchApp.fetch(`https://seeking-alpha.p.rapidapi.com/news/get-details?id=${id}`, options)
-//   let json = response.getContentText()
-//   let data = JSON.parse(json).data
-//   console.log(data)
-// }
-
-// function getAllDataForTicker(ticker='aapl', numNews = 20) {
-//   const options = {
-//     method: 'GET',
-//     headers: {
-//       'x-rapidapi-key': xRapidApiKey,
-//       'x-rapidapi-host': xRapidApiHost
-//     },
-//     muteHttpExceptions: true
-//   };
-
-//   let response = UrlFetchApp.fetch(`https://seeking-alpha.p.rapidapi.com/news/list?id=${ticker}&size=${numNews}&until=0`, options)
-//   let json = response.getContentText()
-//   let data = JSON.parse(json).data
-
-//   console.log('---General data---')
-//   console.log(data)
-//   console.log('---News, titles and dates---')
-//   data.forEach(news => {
-//     console.log(news.attributes)
-//   })
-//   console.log('---Relationships---')
-//   data.forEach(news => {
-//     console.log(news.relationships)
-//   })
-// }
+function properties() {
+  // const apiKey = PropertiesService.getScriptProperties().getProperty('apiKey')
+  // PropertiesService.getScriptProperties().setProperty('apiKey', 'value')
+  // PropertiesService.getScriptProperties().deleteAllProperties()
+}
 
 // function importModuleExample() {
 //   eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
 //   var date = moment().format('MMM Do YY')
 //   Logger.log(date)
 // }
-
-
 
 
