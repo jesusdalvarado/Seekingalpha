@@ -1,8 +1,17 @@
 async function main() {
-  const tickers = getTickersFinviz() // ['aapl', 'den']
+  const url = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
+  let spreadSheet = SpreadsheetApp.openByUrl(url);
+  const sheet = spreadSheet.getSheetByName('Mock')
+  const tickers = getTickersFinviz() //['AAPL', 'DEN']
   const numNews = 5
-  const lastDateOfInteres = '2021-04-25'
-  const prevDateOfInteres = '2021-04-24'
+  const dateTime1 = sheet.getRange('A2:A2').getValue()
+  const dateTime2 = sheet.getRange('B2:B2').getValue()
+  const day1 = Utilities.formatDate(dateTime1, "GMT", "yyyy-MM-dd");
+  const day2 = Utilities.formatDate(dateTime2, "GMT", "yyyy-MM-dd");
+
+  const filteredTitlesDates = await getFormattedNews(tickers, numNews, day1, day2)
+
+  if (filteredTitlesDates === 'ERROR quota limit reached.') { popup() }
 
   const filteredTitlesDates = await getFormattedNews(tickers, numNews, lastDateOfInteres, prevDateOfInteres)
   console.log(filteredTitlesDates, '---res')
