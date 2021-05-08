@@ -106,15 +106,15 @@ function filterNewsByKeywords(titlesDates) {
 }
 
 function properties() {
-  // const apiKey = PropertiesService.getScriptProperties().getProperty('apiKey')
-  // PropertiesService.getScriptProperties().setProperty('apiKey', 'value')
-  // PropertiesService.getScriptProperties().deleteAllProperties()
+  const apiKey = PropertiesService.getScriptProperties().getProperty('apiKey')
+  PropertiesService.getScriptProperties().setProperty('apiKey', 'value')
+  PropertiesService.getScriptProperties().deleteAllProperties()
 }
 
-// function importModuleExample() {
-//   eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
-//   var date = moment().format('MMM Do YY')
-//   Logger.log(date)
-// }
+function importModuleExample() {
+  eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
+  var date = moment().format('MMM Do YY')
+  Logger.log(date)
+}
 
 

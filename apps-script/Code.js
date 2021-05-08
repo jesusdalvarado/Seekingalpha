@@ -13,7 +13,7 @@ async function main() {
 
   if (filteredTitlesDates === 'ERROR quota limit reached.') { popup() }
 
-  //aqui solo insertaremos en el mock los tikers seleccionados con el formato adecuado (incluir la x para luego colocar los no filtrados)
+  // TODO: INCLUDE NON FILTERED NEWS TO COMPARE
 
   const formattedData = filteredTitlesDates.map(x => ['x', x.ticker, x.publishOn, x.title]);
 
@@ -227,12 +227,6 @@ Parser.prototype.iterate = function() {
         return keywords;
 }
 
-/*
-* Extract parts from long content
-*
-* @param {String} content Text to parse
-* @return {object} the result of the exponential calculation
-*/
 function data(content) {
     return new Parser(content);
 }
