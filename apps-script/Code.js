@@ -1,7 +1,7 @@
 async function main() {
-  const url = 'https://docs.google.com/spreadsheets/d/1_I9cACu6pPk4vEQhf6KeOWbpHA0MYkK7IGqNiuaJKfQ/edit?ts=5fff735d#gid=1061429138'
+  const url = 'https://docs.google.com/spreadsheets/d/1DVSCcMwr9QEwDenkHUuLUV-ohUG-NpCulHY4fDOSmcg/edit#gid=0'
   let spreadSheet = SpreadsheetApp.openByUrl(url);
-  const sheet = spreadSheet.getSheetByName('Mock')
+  const sheet = spreadSheet.getSheetByName('Sheet1')
   const tickers = getTickersFinviz() //['AAPL', 'DEN']
   console.log('---TICKERS TO ANALYZE---', tickers)
   console.log(`${tickers.length} tickers found in Finviz`)
