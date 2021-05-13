@@ -8,8 +8,8 @@ async function main() {
   const numNews = 5
   const dateTime1 = sheet.getRange('A2:A2').getValue()
   const dateTime2 = sheet.getRange('B2:B2').getValue()
-  const day1 = Utilities.formatDate(dateTime1, "GMT", "yyyy-MM-dd");
-  const day2 = Utilities.formatDate(dateTime2, "GMT", "yyyy-MM-dd");
+  const day1 = formatDate(dateTime1)
+  const day2 = formatDate(dateTime2)
 
   const filteredTitlesDates = await getFormattedNews(tickers, numNews, day1, day2)
 

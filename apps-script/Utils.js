@@ -111,10 +111,17 @@ function properties() {
   PropertiesService.getScriptProperties().deleteAllProperties()
 }
 
+function formatDate(dateTime) {
+  eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
+  var dateString = moment(dateTime).format('YYYY-MM-DD')
+  return dateString
+}
+
 function importModuleExample() {
   eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
   var date = moment().format('MMM Do YY')
   Logger.log(date)
 }
+
 
 
