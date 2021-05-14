@@ -112,15 +112,32 @@ function properties() {
 }
 
 function formatDate(dateTime) {
-  eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
   var dateString = moment(dateTime).format('YYYY-MM-DD')
   return dateString
+}
+
+function getTimeNY() {
+  var timeNY = new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })
+  return timeNY
+}
+
+function addLastRunToSheet(sheet) {
+  const timeNY = getTimeNY()
+  sheet.getRange('E2').setValue(timeNY)
+}
+
+function addNumTickersToSheet(numTickers, sheet) {
+  sheet.getRange('D2').setValue(numTickers)
 }
 
 function importModuleExample() {
   eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
   var date = moment().format('MMM Do YY')
   Logger.log(date)
+}
+
+function importMoment() {
+  eval(UrlFetchApp.fetch('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js').getContentText())
 }
 
 

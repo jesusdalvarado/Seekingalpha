@@ -1,8 +1,12 @@
 async function main() {
+  importMoment()
+
   const url = 'https://docs.google.com/spreadsheets/d/1DVSCcMwr9QEwDenkHUuLUV-ohUG-NpCulHY4fDOSmcg/edit#gid=0'
   let spreadSheet = SpreadsheetApp.openByUrl(url);
   const sheet = spreadSheet.getSheetByName('Sheet1')
   const tickers = getTickersFinviz() //['AAPL', 'DEN']
+  addNumTickersToSheet(tickers.length, sheet)
+  addLastRunToSheet(sheet)
   console.log('---TICKERS TO ANALYZE---', tickers)
   console.log(`${tickers.length} tickers found in Finviz`)
   const numNews = 5
